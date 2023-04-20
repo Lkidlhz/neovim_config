@@ -1,7 +1,8 @@
 -- leader
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.maplocalleader = ","
 vim.g.tex_flavor = "latex"
+
 
 local opt = vim.opt
 local indent = 4
@@ -43,9 +44,20 @@ opt.spelllang = {"en", "cjk"}
 
 -- terminal true color
 opt.termguicolors = true
+opt.background = "dark"
 
 -- mouse 
 opt.mouse = "a"
 
 -- show mode
 opt.showmode = true
+
+-- transparent
+opt.winblend = 50
+vim.api.nvim_exec([[
+    highlight Normal guibg=NONE ctermbg=NONE
+]], true)
+
+-- encoding
+opt.encoding = "utf-8"
+

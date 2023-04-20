@@ -78,3 +78,4 @@ keymap.set("n", "<leader>ud", util.toggle_diagnostics, { desc = "Toggle Diagnost
 local conceallevel = vim.o.conceallevel > 0 and vim.o.conceallevel or 3
 keymap.set("n", "<leader>uc", function() util.toggle("conceallevel", false, {0, conceallevel}) end, { desc = "Toggle Conceal" })
 
+keymap.set("n", "<leader>t", ":highlight Normal guibg=NONE ctermbg=NONE<CR>")

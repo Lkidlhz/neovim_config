@@ -5,7 +5,17 @@ return {
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
 		  -- load the colorscheme here
-		  vim.cmd([[colorscheme tokyonight]])
+		  -- vim.cmd([[colorscheme tokyonight]])
 		end,
 	},
+    {
+        "ellisonleao/gruvbox.nvim",
+        lazy = false,
+		priority = 1000, -- make sure to load this before all the other start plugins
+		config = function()
+		  -- load the colorscheme here
+            require("plugins.plugins_config.color_gruvbox")
+		    vim.cmd([[colorscheme gruvbox]])
+		end,
+    },
 }
