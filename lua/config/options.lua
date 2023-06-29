@@ -17,6 +17,8 @@ opt.clipboard = "unnamedplus"
 opt.number = true
 -- 相对行号
 opt.relativenumber = true
+-- deadcolomn
+opt.colorcolumn = {80}
 
 opt.cursorline = true
 -- 自动换行
@@ -39,8 +41,9 @@ opt.sidescrolloff = 8
 opt.list = true
 
 -- spell check
-opt.spell = true
+opt.spell = false
 opt.spelllang = {"en", "cjk"}
+
 
 -- terminal true color
 opt.termguicolors = true
@@ -53,7 +56,7 @@ opt.mouse = "a"
 opt.showmode = true
 
 -- transparent
-opt.winblend = 50
+-- opt.winblend = 50
 vim.api.nvim_exec([[
     highlight Normal guibg=NONE ctermbg=NONE
 ]], true)
